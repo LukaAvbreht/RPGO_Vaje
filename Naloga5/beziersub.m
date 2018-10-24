@@ -33,4 +33,10 @@ for i=2:k
     end
 end
 
+clf
+hold on
+for i=1:2^k
+   plot(BS{i}(:,1),BS{i}(:,2))
+end
+hold off
 end
