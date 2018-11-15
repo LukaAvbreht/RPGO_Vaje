@@ -1,3 +1,5 @@
+% testiram matlab sorce control
+
 for i = 1:6
     p = zeros(1,6);
     p(i) = 1;
