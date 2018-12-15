@@ -25,7 +25,6 @@ function [Bx,By,Bz] = lsqbezier2(m,n,P,u,v)
 [l,d] = size(P);
 
 M = zeros(l,(m+1)*(n+1));
-size(M)
 for k=1:l
     for i=0:n
         for j=0:m
@@ -34,11 +33,7 @@ for k=1:l
     end
 end
 
-size(M)
-size(P(:,1))
-
 x = M\P(:,1);
-size(x)
 Bx = reshape(x,m+1,n+1)';
 
 y = M\P(:,2);
