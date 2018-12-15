@@ -24,8 +24,10 @@ db = NaN(m, d);
 for i=1:d
     for j=1:m
         shema = decasteljau(B(:,i), t(j));
-        d = diff(shema(:, n-r), r);
-        db(j, i) = d(1)*factorial(n)/factorial(n-r);
+        shema
+        d = diff(shema(1:r+1, n-r), r);
+        d
+        db(j, i) = (d(1)*(factorial(n)/factorial(n-r)));
     end
 end
 

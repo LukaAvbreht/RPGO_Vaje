@@ -1,4 +1,4 @@
-function D = decasteljau (b , t )
+function D = decasteljau (b , t)
 % Opis :
 % decasteljau vrne shemo de Casteljaujevega postopka za dan
 % seznam koordinat b pri danem parametru t
@@ -23,7 +23,7 @@ n = length(b);
 D = NaN(n);
 
 for i = 1:n
-    D(:, 1) = b;
+    D(i, 1) = b(i);
 end
 
 for i =2:n
