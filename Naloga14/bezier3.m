@@ -21,7 +21,7 @@ function b = bezier3(Bx,By,Bz,U)
 %    toèko na Bezierjevi krpi pri istoležnih 
 %    parametrih iz matrike U
 
-[n,3] = size(U);
+[n,d] = size(U);
 b = zeros(n,3);
 
 for i = 1:n

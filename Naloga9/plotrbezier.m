@@ -13,8 +13,12 @@ hold on
 
 
 bb1 = rbezier(B,w,t);
+F = farinove(B,w);
 if d == 2
-    plot(bb1(:,1),bb1(:,2),'k-')
+    plot(bb1(:,1),bb1(:,2),'b-')
+    plot(B(:,1),B(:,2),'k-')
+    plot(B(:,1),B(:,2),'ro')
+    plot(F(:,1),F(:,2),'bo')
 elseif d == 3
     % plot3D(bb1(:,1),bb1(:,2),bb1(:,3))
 end

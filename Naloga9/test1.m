@@ -18,15 +18,15 @@ t = 0:0.01:1;
 bb1 = rbezier(B,w,t);
 bb2 = rbezier(B2,w2,t);
 
-% plotrbezier(B2,w2,t);
+plotrbezier(B2,w2,t);
 
-% naloga 10
-
-B = [1 0;1 4;-3 2;-3 -2;1 -4;1 0];
-w = [1 0.2 0.2 0.2 0.2 1];
-plotrbezier(B,w,t);
-
-% elevation step:
-[Be,we] = rbezierelv(B,w);
-wh = ones(1,length(we)); % to je uresnici samo plot berier
-plotrbezier(Be,wh,t);
+% % naloga 10
+% 
+% B = [1 0;1 4;-3 2;-3 -2;1 -4;1 0];
+% w = [1 0.2 0.2 0.2 0.2 1];
+% plotrbezier(B,w,t);
+% 
+% % elevation step:
+% [Be,we] = rbezierelv(B,w);
+% wh = ones(1,length(we)); % to je uresnici samo plot berier
+% plotrbezier(Be,wh,t);

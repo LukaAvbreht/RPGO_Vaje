@@ -39,7 +39,35 @@ fprintf('Baricentricne vektorja y = (0,1): (%0.6f,%0.6f,%0.6f)\n',BVy(1),BVy(2),
 % Baricentricne koordinate vektorja x = (1.000000,0.000000): (-0.166667, 0.250000, -0.083333)
 % Baricentricne koordinate vektorja y = (0.000000,1.000000): (-0.166667, -0.250000, 0.416667)
 
+pT1 = decasteljau3(B,BP1);
+pT2 = decasteljau3(B,BP2);
+pT3 = decasteljau3(B,BP3);
+fprintf('Vrednosti p     v tockah P1, P2, P3: %0.6f %0.6f %0.6f\n',pT1,pT2,pT3);
 
+pT1 = odvod(B,BVx,BP1);
+pT2 = odvod(B,BVx,BP2);
+pT3 = odvod(B,BVx,BP3);
+fprintf('Vrednosti Dx p  v tockah P1, P2, P3: %0.6f %0.6f %0.6f\n',pT1,pT2,pT3);
+
+pT1 = odvod(B,BVy,BP1);
+pT2 = odvod(B,BVy,BP2);
+pT3 = odvod(B,BVy,BP3);
+fprintf('Vrednosti Dy p  v tockah P1, P2, P3: %0.6f %0.6f %0.6f\n',pT1,pT2,pT3);
+
+pT1 = odvod(B,[BVx; BVx],BP1);
+pT2 = odvod(B,[BVx; BVx],BP2);
+pT3 = odvod(B,[BVx; BVx],BP3);
+fprintf('Vrednosti Dxx p v tockah P1, P2, P3: %0.6f %0.6f %0.6f\n',pT1,pT2,pT3);
+
+pT1 = odvod(B,[BVx; BVy],BP1);
+pT2 = odvod(B,[BVx; BVy],BP2);
+pT3 = odvod(B,[BVx; BVy],BP3);
+fprintf('Vrednosti Dxy p v tockah P1, P2, P3: %0.6f %0.6f %0.6f\n',pT1,pT2,pT3);
+
+pT1 = odvod(B,[BVy; BVy],BP1);
+pT2 = odvod(B,[BVy; BVy],BP2);
+pT3 = odvod(B,[BVy; BVy],BP3);
+fprintf('Vrednosti Dyy p v tockah P1, P2, P3: %0.6f %0.6f %0.6f\n',pT1,pT2,pT3);
 
 % Vrednosti p     v tockah P1, P2, P3: 2.000000, 1.074074, -1.375000,
 % Vrednosti Dx p  v tockah P1, P2, P3: 2.500000, 1.861111, -1.937500
